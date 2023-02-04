@@ -1,0 +1,17 @@
+<% for(var i = 0; i < sitters.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <!-- <td><a href="/sitterPapers/<%= sitters[i].sitterid %>" class="userInfo"><%= sitters[i].username %></a></td> -->
+        <td><%= sitters[i].username %></td>
+        <td><%= sitters[i].emailaddress %></td>
+        <td><%= sitters[i].phonenumber %></td>
+        <td><%= sitters[i].nationality %></td>
+        <td><%= sitters[i].city %></td>
+        <td><%= sitters[i].serviceprice %></td>
+        <td>
+            <a href="/api-deleteSitter/<%= sitters[i].sitterid %>" style="color: red;font-weight: bold;">حذف</a>
+            <br />
+            <a href="/update-sitter/<%= sitters[i].sitterid %>" style="color: #0c746c;font-weight: bold">تعديل</a>
+        </td>
+    </tr>
+<% } %>

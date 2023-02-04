@@ -1,0 +1,14 @@
+<% for(var i = 0; i < children.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= children[i].name %></td>
+        <td><%= children[i].dateofbirth %></td>
+        <td><%= children[i].nationality %></td>
+        <td><%= children[i].hoppy %></td>
+        <td>
+            <a href="/api-deleteChild/<%= children[i].childid %>/<%= children[i].customerid %>" style="color: red;font-weight: bold;">حذف</a>
+            <br />
+            <a href="/update-children/<%= children[i].childid %>" style="color: #0c746c;font-weight: bold">تعديل</a>
+        </td>
+    </tr>
+<% } %>

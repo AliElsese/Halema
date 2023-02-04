@@ -1,0 +1,14 @@
+<% for(var i = 0; i < monitors.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= monitors[i].name %></td>
+        <td><%= monitors[i].emailaddress %></td>
+        <td><%= monitors[i].phonenumber %></td>
+        <td><%= monitors[i].dateofbirth %></td>
+        <td>
+            <a href="/api-deleteMonitor/<%= monitors[i].monitorid %>/<%= monitors[i].customerid %>" style="color: red;font-weight: bold;">حذف</a>
+            <br />
+            <a href="/update-monitor/<%= monitors[i].monitorid %>" style="color: #0c746c;font-weight: bold">تعديل</a>
+        </td>
+    </tr>
+<% } %>

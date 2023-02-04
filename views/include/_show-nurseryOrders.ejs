@@ -1,0 +1,19 @@
+<% for(var i = 0; i < nurseryOrders.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= nurseryOrders[i].customername %></td>
+        <td><%= nurseryOrders[i].hours %></td>
+        <td><%= nurseryOrders[i].date %></td>
+        <td><%= nurseryOrders[i].monitorname %></td>
+        <td><%= nurseryOrders[i].childrennumber %></td>
+        <td><%= nurseryOrders[i].username %></td>
+        <% if(nurseryOrders[i].orderstatus == 'false') { %>
+        <td>غير مكتمل</td>
+        <% } else { %>
+        <td>مكتمل</td>
+        <% } %>
+        <td>
+            <a href="/api-deleteOrder/<%= nurseryOrders[i].orderid %>" style="color: red;font-weight: bold;">حذف</a>
+        </td>
+    </tr>
+<% } %>

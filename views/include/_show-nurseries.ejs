@@ -1,0 +1,18 @@
+<% for(var i = 0; i < nurseries.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= nurseries[i].username %></td>
+        <!-- <td><a href="/nurseryPapers/<%= nurseries[i].nurseryid %>" class="userInfo"><%= nurseries[i].nurseryname %></a></td> -->
+        <td><%= nurseries[i].nurseryname %></td>
+        <td><%= nurseries[i].emailaddress %></td>
+        <td><%= nurseries[i].phonenumber %></td>
+        <td><%= nurseries[i].nationality %></td>
+        <td><%= nurseries[i].city %></td>
+        <td><%= nurseries[i].serviceprice %></td>
+        <td>
+            <a href="/api-deleteNursery/<%= nurseries[i].nurseryid %>" style="color: red;font-weight: bold;">حذف</a>
+            <br />
+            <a href="/update-nursery/<%= nurseries[i].nurseryid %>" style="color: #0c746c;font-weight: bold">تعديل</a>
+        </td>
+    </tr>
+<% } %>

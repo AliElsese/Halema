@@ -1,0 +1,19 @@
+<% for(var i = 0; i < sitterOrders.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= sitterOrders[i].customername %></td>
+        <td><%= sitterOrders[i].hours %></td>
+        <td><%= sitterOrders[i].date %></td>
+        <td><%= sitterOrders[i].monitorname %></td>
+        <td><%= sitterOrders[i].childrennumber %></td>
+        <td><%= sitterOrders[i].username %></td>
+        <% if(sitterOrders[i].orderstatus == 'false') { %>
+        <td>غير مكتمل</td>
+        <% } else { %>
+        <td>مكتمل</td>
+        <% } %>
+        <td>
+            <a href="/api-deleteOrder/<%= sitterOrders[i].orderid %>" style="color: red;font-weight: bold;">حذف</a>
+        </td>
+    </tr>
+<% } %>

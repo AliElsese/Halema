@@ -1,0 +1,25 @@
+<% for(var i = 0; i < papers.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td>
+            <img src="/<%= papers[0].lease %>" alt="" width="100px" height="100px">
+        </td>
+        <td>
+            <img src="/<%= papers[0].residencephoto %>" alt=""width="100px" height="100px">
+        </td>
+        <td>
+            <img src="/<%= papers[0].personalpicture %>" alt="" width="100px" height="100px">
+        </td>
+        <td>
+            <img src="/<%= papers[0].commercialrefister %>" alt="" width="100px" height="100px">
+        </td>
+        <td>
+            <img src="/<%= papers[0].taxnumber %>" alt="" width="100px" height="100px">
+        </td>
+        <td>
+            <a href="" style="color: red;font-weight: bold;">حذف</a>
+            <br />
+            <a href="/update-sitterPapers/<%= papers[i].sitterid %>" style="color: #0c746c;font-weight: bold">تعديل</a>
+        </td>
+    </tr>
+<% } %>
